@@ -1,0 +1,33 @@
+/* Full-screen background video */
+.back-vid {
+    position: fixed; /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Scales to cover without distortion, cropping if needed */
+    z-index: -1; /* Places it behind all other content */
+    pointer-events: none; /* Prevents interaction with the video */
+}
+
+/* Ensure body and other elements are on top */
+body {
+    margin: 0; /* Removes default margins */
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll if needed */
+}
+
+/* Your existing slider styles (add or update as needed) */
+.slider {
+    position: relative; /* Keeps slider above video */
+    z-index: 1;
+    /* Add your slider-specific styles here */
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Or cover, based on your preference */
+    position: relative;
+    z-index: 1; /* Ensures image is above video */
+}
